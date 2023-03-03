@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Thank You!{% endblock %}
+
+{% block content %}
+<h3>Thank you for filling the survey out</h3>
+<p>{{session['responses']}}</p>
+<!-- <h3>{{msg}}</h3> -->
+<!-- <form action="/">
+    <button type="submit">Reset</button>
+</form> -->
+{% endblock %}

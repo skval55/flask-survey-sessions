@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Satisfaction Survey{% endblock %}
+
+{% block content %}
+
+<h3>{{msg}}</h3>
+<form method='post' action="/answer">
+    {% for choice in choices %}
+    <div>
+        <input name="question" value='{{choice}}' type="radio">
+        <label for="{{choice}}">{{choice}}</label>
+    </div>
+    <br>
+    {% endfor %}
+    <!-- <div>
+        <input name="question" value="No" type="radio">
+        <label for="No">No</label>
+    </div><br>
+    <br> -->
+    <button type="submit">submit</button>
+</form>
+
+{% endblock %}
